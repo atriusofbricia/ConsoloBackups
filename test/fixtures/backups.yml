@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sourcehost: MyString
+  targethost: MyString
+  sourcepath: MyString
+  targetpath: MyString
+  status: MyString
+
+two:
+  sourcehost: MyString
+  targethost: MyString
+  sourcepath: MyString
+  targetpath: MyString
+  status: MyString

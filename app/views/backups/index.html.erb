@@ -1,0 +1,37 @@
+<h1>Listing backups</h1>
+
+<table>
+  <thead>
+  <table class="table table-striped">
+    <tr>
+      <th>Sourcehost</th>
+      <th>Targethost</th>
+      <th>Sourcepath</th>
+      <th>Targetpath</th>
+      <th>Status</th>
+      <th>Date</th>
+      <!--<th></th>
+      <th></th>-->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @backups.each do |backup| %>
+      <tr>
+        <td><%= backup.sourcehost %></td>
+        <td><%= backup.targethost %></td>
+        <td><%= backup.sourcepath %></td>
+        <td><%= backup.targetpath %></td>
+        <td><%= backup.status %></td>
+        <td><%= backup.date %></td>
+        <!--<td><%= link_to 'Show', backup %></td>
+        <td><%= link_to 'Edit', edit_backup_path(backup) %></td>
+        <td><%= link_to 'Destroy', backup, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<!--<%= link_to 'New Backup', new_backup_path %>-->

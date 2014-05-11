@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sourcehost:</strong>
+  <%= @backup.sourcehost %>
+</p>
+
+<p>
+  <strong>Targethost:</strong>
+  <%= @backup.targethost %>
+</p>
+
+<p>
+  <strong>Sourcepath:</strong>
+  <%= @backup.sourcepath %>
+</p>
+
+<p>
+  <strong>Targetpath:</strong>
+  <%= @backup.targetpath %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @backup.status %>
+</p>
+
+<%= link_to 'Edit', edit_backup_path(@backup) %> |
+<%= link_to 'Back', backups_path %>
