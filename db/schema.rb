@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140510152935) do
+ActiveRecord::Schema.define(version: 20140511162217) do
 
   create_table "backups", force: true do |t|
     t.string   "sourcehost"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140510152935) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "date"
   end
 
   create_table "friendly_id_slugs", force: true do |t|
