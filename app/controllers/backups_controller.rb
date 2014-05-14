@@ -6,8 +6,10 @@ class BackupsController < ApplicationController
   # GET /backups
   # GET /backups.json
   def index
+    @q = Backup.search(params[:q])
     #@backups = Backup.all
-    @backups = Backup.all.page params[:page]
+    #@backups = Backup.all.page params[:page]
+    @backups = @q.result.page(params[:page])
   end
 
   # GET /backups/1

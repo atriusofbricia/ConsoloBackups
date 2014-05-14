@@ -38,3 +38,6 @@ group :development, :test do
 end
 
 gem 'bootstrap-sass', '~> 3.0.3.0'
+
+# Add Ransack for search and such
+gem "ransack"

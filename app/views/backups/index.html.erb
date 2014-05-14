@@ -1,19 +1,38 @@
 <h1>Backup Log</h1>
 
 <table>
+ <tr>
+  <td>
+<%= search_form_for @q do |f| %>
+  <%= f.label :sourcehost %>
+  <%= f.search_field :sourcehost_cont %>
+  <%= f.submit %>
+<% end %>
+   </td>
+   <td>
+<%= search_form_for @q do |f| %>
+  <%= f.label :targethost %>
+  <%= f.search_field :targethost_cont %>
+  <%= f.submit %>
+<% end %>
+   </td>
+  </tr>
+</table 
+
+<table>
   <thead>
   <table class="table table-striped">
     <tr>
-      <th>System/Data Purpose</th>
-      <th>Backup Type</th>
-      <th>Environment</th>
-      <th>Application</th>
-      <th>Source Host</th>
-      <th>Target Host</th>
-      <th>Source Path</th>
-      <th>Target Path</th>
-      <th>Status</th>
-      <th>Date</th>
+      <%= content_tag :th, sort_link(@q, :purpose, 'System/Data Purpose') %>
+      <%= content_tag :th, sort_link(@q, :type, 'Backup Type') %>
+      <%= content_tag :th, sort_link(@q, :environment, 'Environment') %>
+      <%= content_tag :th, sort_link(@q, :application, 'Application') %>
+      <%= content_tag :th, sort_link(@q, :sourcehost, 'Source Host') %>
+      <%= content_tag :th, sort_link(@q, :targethost, 'Target Host') %>
+      <%= content_tag :th, sort_link(@q, :sourcepath, 'Source Path') %>
+      <%= content_tag :th, sort_link(@q, :targetpath, 'Target Path') %>
+      <%= content_tag :th, sort_link(@q, :status, 'Status') %>
+      <%= content_tag :th, sort_link(@q, :date, 'Date') %>
       <!--<th></th>
       <th></th>-->
     </tr>
