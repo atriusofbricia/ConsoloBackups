@@ -24,7 +24,7 @@
   <table class="table table-striped">
     <tr>
       <%= content_tag :th, sort_link(@q, :purpose, 'System/Data Purpose') %>
-      <%= content_tag :th, sort_link(@q, :type, 'Backup Type') %>
+      <%= content_tag :th, sort_link(@q, :method, 'Backup Method') %>
       <%= content_tag :th, sort_link(@q, :environment, 'Environment') %>
       <%= content_tag :th, sort_link(@q, :application, 'Application') %>
       <%= content_tag :th, sort_link(@q, :sourcehost, 'Source Host') %>
@@ -42,7 +42,7 @@
     <% @backups.each do |backup| %>
       <tr>
         <td><%= backup.purpose %></td>
-        <td><%= backup.type %></td>
+        <td><%= backup.method %></td>
         <td><%= backup.environment %></td>
         <td><%= backup.application %></td>
         <td><%= backup.sourcehost %></td>
