@@ -1,11 +1,13 @@
 class BackupsController < ApplicationController
+  before_action :authenticate_user!, except: [ :home ]
   before_action :set_backup, only: [:show, :edit, :update, :destroy]
   skip_before_filter :verify_authenticity_token, :only => [:create]
 
   # GET /backups
   # GET /backups.json
   def index
-    @backups = Backup.all
+    #@backups = Backup.all
+    @backups = Backup.all.page params[:page]
   end
 
   # GET /backups/1

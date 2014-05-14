@@ -1,13 +1,17 @@
-<h1>Listing backups</h1>
+<h1>Backup Log</h1>
 
 <table>
   <thead>
   <table class="table table-striped">
     <tr>
-      <th>Sourcehost</th>
-      <th>Targethost</th>
-      <th>Sourcepath</th>
-      <th>Targetpath</th>
+      <th>System/Data Purpose</th>
+      <th>Backup Type</th>
+      <th>Environment</th>
+      <th>Application</th>
+      <th>Source Host</th>
+      <th>Target Host</th>
+      <th>Source Path</th>
+      <th>Target Path</th>
       <th>Status</th>
       <th>Date</th>
       <!--<th></th>
@@ -18,6 +22,10 @@
   <tbody>
     <% @backups.each do |backup| %>
       <tr>
+        <td><%= backup.purpose %></td>
+        <td><%= backup.type %></td>
+        <td><%= backup.environment %></td>
+        <td><%= backup.application %></td>
         <td><%= backup.sourcehost %></td>
         <td><%= backup.targethost %></td>
         <td><%= backup.sourcepath %></td>
@@ -34,4 +42,5 @@
 
 <br>
 
+<%= paginate @backups %>
 <!--<%= link_to 'New Backup', new_backup_path %>-->
